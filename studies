@@ -1,0 +1,56 @@
+----------------------------------------------------------------------------------------------------------
+VARIADIC FUNCTIONS 
+
+https://www.geeksforgeeks.org/variadic-functions-in-c/
+
+https://www.equestionanswers.com/c/variadic-function.php
+
+----------------------------------------------------------------------------------------------------------
+VARIADIC MACROS 
+
+https://jameshfisher.com/2016/11/23/c-varargs/
+
+https://iq.opengenus.org/how-printf-and-scanf-function-works-in-c-internally/
+
+----------------------------------------------------------------------------------------------------------
+PRINTF EXPLANATION
+
+https://www.equestionanswers.com/c/c-printf-scanf-working-principle.php
+
+User supply a string and input argumnets. 
+Printf creates an internal buffer for constructing output string. 
+Now printf iterates through each characters of user string and copies the character to the output string. 
+Printf only stops at "%". "%" means there is an argument to convert. 
+Arguments are in the form of char, int, long, float, double or string. 
+It converts it to string and appends to output buffer. 
+If the argument is string then it does a string copy. 
+Finally printf may reach at the end of user sting and it copies the entire buffer to the stdout file.
+
+----------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------------
+C COMPILER FLAGS
+
+https://gcc.gnu.org/onlinedocs/gcc/Option-Summary.html
+
+----------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------------
+
+FORMAT SPECIFIERS
+
+https://www.geeksforgeeks.org/format-specifiers-in-c/
+
+----------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------------
+HEX NUMBERS
+
+https://aticleworld.com/c-program-to-convert-decimal-to-hexadecimal/
+
+https://www.educba.com/hexadecimal-in-c/
+
+
+
+----------------------------------------------------------------------------------------------------------
+
