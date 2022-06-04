@@ -27,11 +27,13 @@ int	format_specifier(char c, va_list args)
 	if (c == 'i' || c == 'd')
 		return (ft_printf_signed_int(va_arg(args, int)));
 	if (c == 'u')
-		return (ft_printf_unsigned_int(va_arg(args, int)));
+		return (ft_printf_unsigned_int(va_arg(args, unsigned int)));
 	if (c == 'x')
 		return (ft_printf_lower_hex(va_arg(args, int)));
 	if (c == 'X')
 		return (ft_printf_upper_hex(va_arg(args, int)));
+	if (c == 'p')
+		return (ft_printf_pointer(va_arg(args, unsigned long int)));
 	return (-1); // caso nao seja nenhum dos placeholders requisitados
 }
 
