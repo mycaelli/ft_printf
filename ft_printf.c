@@ -50,13 +50,13 @@ int	ft_printf(const char *str_format, ...)
 	{
 		if (str_format[i] != '%')
 		{
-			printed_bytes = write(1, &str_format[i], 1);
+			printed_bytes += write(1, &str_format[i], 1);
 			i++;
 		}
 		else
 		{
 			//i++ pega o placeholder
-			printed_bytes = format_specifier(str_format[i+1], args);
+			printed_bytes += format_specifier(str_format[i+1], args);
 			i += 2; //pula o % e o placeholder
 		}
 	}
