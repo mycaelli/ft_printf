@@ -1,4 +1,3 @@
-
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
@@ -13,9 +12,6 @@
 
 #include "ft_printf.h"
 
-#include <stdio.h>
-
-// returns printed bytes
 int	format_specifier(char c, va_list args)
 {
 	if (c == 'c')
@@ -29,24 +25,21 @@ int	format_specifier(char c, va_list args)
 	if (c == 'u')
 		return (ft_printf_unsigned_int(va_arg(args, unsigned int)));
 	if (c == 'x')
-	{
-		//printf("format_specifier: %c\n", c);
 		return (ft_printf_lower_hex(va_arg(args, int)));
-	}
 	if (c == 'X')
 		return (ft_printf_upper_hex(va_arg(args, int)));
 	if (c == 'p')
 		return (ft_printf_pointer(va_arg(args, unsigned long int)));
-	return (-1); // caso nao seja nenhum dos placeholders requisitados
+	return (-1);
 }
 
 int	ft_printf(const char *str_format, ...)
 {
 	va_list	args;
-	va_start(args, str_format);
-	int printed_bytes;
-	int i;
+	int		printed_bytes;
+	int		i;
 
+	va_start(args, str_format);
 	i = 0;
 	printed_bytes = 0;
 	while (str_format[i])
@@ -58,12 +51,10 @@ int	ft_printf(const char *str_format, ...)
 		}
 		else
 		{
-			//i++ pega o placeholder
-			printed_bytes += format_specifier(str_format[i+1], args);
-			i += 2; //pula o % e o placeholder
+			printed_bytes += format_specifier(str_format[i + 1], args);
+			i += 2;
 		}
 	}
 	va_end(args);
 	return (printed_bytes);
 }
-

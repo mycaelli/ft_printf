@@ -14,8 +14,9 @@
 
 int	ft_printf_upper_hex(unsigned long int n)
 {
-	char *s;
-	int bytes;
+	char	*s;
+	int		bytes;
+
 	s = NULL;
 	s = ft_itoa_hex(n);
 	bytes = ft_printf_str(s);

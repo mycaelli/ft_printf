@@ -12,13 +12,11 @@
 
 #include "ft_printf.h"
 
-#include <stdio.h>
-
 int	ft_printf_lower_hex(unsigned long int n)
 {
-	char *s;
-	int bytes;
-	int i;
+	char	*s;
+	int		bytes;
+	int		i;
 
 	i = 0;
 	s = ft_itoa_hex(n);

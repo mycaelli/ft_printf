@@ -6,7 +6,7 @@
 #    By: mcerquei <mcerquei@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/26 21:20:54 by mcerquei          #+#    #+#              #
-#    Updated: 2022/06/03 20:50:26 by mcerquei         ###   ########.fr        #
+#    Updated: 2022/06/05 00:30:36 by mcerquei         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,8 +54,9 @@ SRC = 	ft_isalpha.c \
 		ft_putendl_fd.c \
 		ft_putnbr_fd.c \
         ft_split.c \
-		ft_uitoa.c \
-		ft_hexitoa.c \
+		ft_itoa_ui.c \
+		ft_itoa_hex.c \
+		ft_itoa_ptr.c \
 		ft_islowercase.c \
 		ft_isuppercase.c
 

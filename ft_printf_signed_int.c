@@ -14,8 +14,8 @@
 
 int	ft_printf_signed_int(int n)
 {
-	char *s;
-	int bytes;
+	char	*s;
+	int		bytes;
 
 	s = ft_itoa(n);
 	bytes = ft_printf_str(s);

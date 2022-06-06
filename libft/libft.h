@@ -6,7 +6,7 @@
 /*   By: mcerquei <mcerquei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 20:15:58 by mcerquei          #+#    #+#             */
-/*   Updated: 2022/06/04 23:18:21 by mcerquei         ###   ########.fr       */
+/*   Updated: 2022/06/06 06:10:18 by mcerquei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,13 +111,14 @@ t_list	*ft_lstnew(void *content);
 
 int		ft_lstsize(t_list *lst);
 
-char	*ft_uitoa(unsigned int n);
+char	*ft_itoa_ui(unsigned int n);
 
-char	*ft_hexitoa(int n);
+char	*ft_itoa_hex(unsigned int n);
 
-int	ft_isuppercase(char c);
+char	*ft_itoa_ptr(unsigned long int n);
 
-int	ft_islowercase(char c);
+int		ft_isuppercase(char c);
 
+int		ft_islowercase(char c);
 
 #endif

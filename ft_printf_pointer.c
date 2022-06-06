@@ -14,9 +14,9 @@
 
 int	ft_printf_pointer(unsigned long int n)
 {
-	char *s;
-	int bytes;
-	
+	char	*s;
+	int		bytes;
+
 	if (n == 0)
 		return (write(1, "(nil)", 5));
 	bytes = write(1, "0x", 2);

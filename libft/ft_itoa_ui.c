@@ -12,8 +12,6 @@
 
 #include "libft.h"
 
-#include <stdio.h>
-
 static int	ft_num_count(unsigned int n)
 {
 	unsigned long	count;
@@ -41,7 +39,6 @@ static char	*ft_itoa_ui_zero(void)
 
 char	*ft_itoa_ui(unsigned int n)
 {
-	//TRATAR ZERO
 	char				*num;
 	unsigned long		size;
 

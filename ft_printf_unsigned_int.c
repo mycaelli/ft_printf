@@ -16,8 +16,9 @@
 
 int	ft_printf_unsigned_int(unsigned int n)
 {
-	char *s;
-	int bytes;
+	char	*s;
+	int		bytes;
+
 	s = ft_itoa_ui(n);
 	bytes = ft_printf_str(s);
 	free(s);

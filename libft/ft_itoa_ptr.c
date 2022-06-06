@@ -6,7 +6,7 @@
 /*   By: mcerquei <mcerquei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/05 00:21:07 by mcerquei          #+#    #+#             */
-/*   Updated: 2022/06/06 04:51:12 by mcerquei         ###   ########.fr       */
+/*   Updated: 2022/06/06 06:07:57 by mcerquei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-
-#include <stdio.h>
 
 static size_t	ft_count_digits(size_t n)
 {
@@ -43,9 +41,9 @@ static size_t	ft_count_digits(size_t n)
 
 char	*ft_itoa_ptr(unsigned long int n)
 {
-	char	*ptr;
-	int		size;
-	unsigned long int remainder;
+	char				*ptr;
+	int					size;
+	unsigned long int	remainder;
 
 	remainder = 0;
 	size = ft_count_digits(n);
@@ -63,7 +61,5 @@ char	*ft_itoa_ptr(unsigned long int n)
 		size--;
 		n /= 16;
 	}
-	//if (size == 0 && ptr[1] == '\0')
-		//ptr[0] = '0';
 	return (ptr);
 }

@@ -12,8 +12,6 @@
 
 #include "libft.h"
 
-#include <stdio.h>
-
 static size_t	ft_count_digits(size_t n)
 {
 	unsigned int	digits;
@@ -38,12 +36,10 @@ char	*ft_itoa_hex(unsigned int n)
 	hex = NULL;
 	remainder = 0;
 	size = ft_count_digits(n);
-	//printf("size %d\n", size);
 	hex = (char *)malloc(size + 1);
 	if (!hex)
 		return (NULL);
 	hex[size--] = '\0';
-	//printf("n antes da divisão: %d\n", n);
 	while (n != 0)
 	{
 		remainder = n % 16;

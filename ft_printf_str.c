@@ -12,7 +12,6 @@
 
 #include "ft_printf.h"
 
-#include <stdio.h>
 int	ft_printf_str(char *s)
 {	
 	if (!s)
