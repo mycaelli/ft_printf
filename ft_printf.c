@@ -29,7 +29,10 @@ int	format_specifier(char c, va_list args)
 	if (c == 'u')
 		return (ft_printf_unsigned_int(va_arg(args, unsigned int)));
 	if (c == 'x')
+	{
+		//printf("format_specifier: %c\n", c);
 		return (ft_printf_lower_hex(va_arg(args, int)));
+	}
 	if (c == 'X')
 		return (ft_printf_upper_hex(va_arg(args, int)));
 	if (c == 'p')

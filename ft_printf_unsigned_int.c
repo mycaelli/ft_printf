@@ -6,7 +6,7 @@
 /*   By: mcerquei <mcerquei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/03 14:53:42 by mcerquei          #+#    #+#             */
-/*   Updated: 2022/06/03 17:03:24 by mcerquei         ###   ########.fr       */
+/*   Updated: 2022/06/05 00:29:53 by mcerquei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_printf_unsigned_int(unsigned int n)
 {
 	char *s;
 	int bytes;
-	s = ft_uitoa(n);
+	s = ft_itoa_ui(n);
 	bytes = ft_printf_str(s);
 	free(s);
 	return (bytes);

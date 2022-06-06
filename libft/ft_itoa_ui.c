@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_uitoa.c                                         :+:      :+:    :+:   */
+/*   ft_itoa_ui.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcerquei <mcerquei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/03 15:35:45 by mcerquei          #+#    #+#             */
-/*   Updated: 2022/06/03 18:16:12 by mcerquei         ###   ########.fr       */
+/*   Updated: 2022/06/06 04:50:43 by mcerquei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static int	ft_num_count(unsigned int n)
 	return (count);
 }
 
-static char	*ft_uitoa_zero(void)
+static char	*ft_itoa_ui_zero(void)
 {
 	char	*num;
 
@@ -39,13 +39,14 @@ static char	*ft_uitoa_zero(void)
 	return (num);
 }
 
-char	*ft_uitoa(unsigned int n)
+char	*ft_itoa_ui(unsigned int n)
 {
+	//TRATAR ZERO
 	char				*num;
 	unsigned long		size;
 
 	if (n == 0)
-		return (ft_uitoa_zero());
+		return (ft_itoa_ui_zero());
 	size = ft_num_count(n);
 	num = (char *)malloc((size + 1) * sizeof(char));
 	if (!num)

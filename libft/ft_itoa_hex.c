@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_hexitoa.c                                       :+:      :+:    :+:   */
+/*   ft_itoa_hex.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcerquei <mcerquei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/03 19:50:05 by mcerquei          #+#    #+#             */
-/*   Updated: 2022/06/04 23:27:36 by mcerquei         ###   ########.fr       */
+/*   Updated: 2022/06/06 04:42:48 by mcerquei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 #include <stdio.h>
 
-static size_t	ft_count_digits(size_t n, int base)
+static size_t	ft_count_digits(size_t n)
 {
 	unsigned int	digits;
 
@@ -24,34 +24,37 @@ static size_t	ft_count_digits(size_t n, int base)
 	while (n > 0)
 	{
 		digits++;
-		n /= base;
+		n /= 16;
 	}
 	return (digits);
 }
 
-char	*ft_hexitoa(int n)
+char	*ft_itoa_hex(unsigned int n)
 {
-	char	*hex_num;
+	char	*hex;
 	int		size;
 	int		remainder;
 
+	hex = NULL;
 	remainder = 0;
-	size = ft_count_digits(n, 16);
+	size = ft_count_digits(n);
 	//printf("size %d\n", size);
-	hex_num = (char *)malloc(size + 1);
-	if (!hex_num)
+	hex = (char *)malloc(size + 1);
+	if (!hex)
 		return (NULL);
-	hex_num[size--] = '\0';
+	hex[size--] = '\0';
 	//printf("n antes da divisão: %d\n", n);
 	while (n != 0)
 	{
 		remainder = n % 16;
 		if (remainder < 10)
-			hex_num[size] = remainder + 48;
+			hex[size] = remainder + 48;
 		else
-			hex_num[size] = remainder + 55;
+			hex[size] = remainder + 55;
 		size--;
 		n /= 16;
 	}
-	return (hex_num);
+	if (size == 0 && hex[1] == '\0')
+		hex[0] = '0';
+	return (hex);
 }

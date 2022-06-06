@@ -6,7 +6,7 @@
 /*   By: mcerquei <mcerquei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/05 00:21:07 by mcerquei          #+#    #+#             */
-/*   Updated: 2022/06/05 01:25:56 by mcerquei         ###   ########.fr       */
+/*   Updated: 2022/06/06 04:51:12 by mcerquei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,25 +43,27 @@ static size_t	ft_count_digits(size_t n)
 
 char	*ft_itoa_ptr(unsigned long int n)
 {
-	char	*hex_num;
+	char	*ptr;
 	int		size;
 	unsigned long int remainder;
 
 	remainder = 0;
 	size = ft_count_digits(n);
-	hex_num = (char *)malloc(size + 1);
-	if (!hex_num)
+	ptr = (char *)malloc(size + 1);
+	if (!ptr)
 		return (NULL);
-	hex_num[size--] = '\0';
+	ptr[size--] = '\0';
 	while (n != 0)
 	{
 		remainder = n % 16;
 		if (remainder < 10)
-			hex_num[size] = remainder + 48;
+			ptr[size] = remainder + 48;
 		else
-			hex_num[size] = remainder + 87;
+			ptr[size] = remainder + 87;
 		size--;
 		n /= 16;
 	}
-	return (hex_num);
+	//if (size == 0 && ptr[1] == '\0')
+		//ptr[0] = '0';
+	return (ptr);
 }
