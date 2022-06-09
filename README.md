@@ -13,4 +13,4 @@ To develop this i had to understand how to use variadic functions and how to lin
 <br />
 <br />
 Studies file contaims links that helped me understand and develop the project. <br />
-Makefile_test contaims targets that runs the project with a main function.
+Makefile_tests contaims targets that runs the project with a main function.
