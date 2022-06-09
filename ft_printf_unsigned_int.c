@@ -6,13 +6,11 @@
 /*   By: mcerquei <mcerquei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/03 14:53:42 by mcerquei          #+#    #+#             */
-/*   Updated: 2022/06/05 00:29:53 by mcerquei         ###   ########.fr       */
+/*   Updated: 2022/06/08 01:49:08 by mcerquei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
-#include <stdio.h>
 
 int	ft_printf_unsigned_int(unsigned int n)
 {

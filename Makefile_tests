@@ -6,7 +6,7 @@
 #    By: mcerquei <mcerquei@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/26 21:20:54 by mcerquei          #+#    #+#              #
-#    Updated: 2022/06/09 02:54:46 by mcerquei         ###   ########.fr        #
+#    Updated: 2022/06/05 00:05:12 by mcerquei         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,6 +42,15 @@ $(NAME):	$(SRC_OBJ)
 
 $(SRC_OBJ):
 	$(CC) $(CFLAGS) -c $(SRC)
+
+run: cmp
+	./a.out main.o
+
+cmp: all
+	$(CC) -g $(CFLAGS) $(SRC) libftprintf.a main.c
+
+run_clean: clean fclean
+	$(RM) ./a.out main.o
 
 clean:
 	$(RM) $(SRC_OBJ) $(BONUS_OBJ)
