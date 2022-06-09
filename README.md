@@ -1,6 +1,6 @@
 # ft_printf
 <img src="https://game.42sp.org.br/static/assets/achievements/ft_printfe.png" alt="Alt text">
-This projects aims to replicate the C function <b>printf</b> from stdio.h lib.
+This projects aims to replicate the C function <b>printf</b> from stdio.h lib. <br />
 In this implementation we have the flags for printing: 
 <ul> 
 <li>char (%c) </li>
@@ -12,5 +12,5 @@ In this implementation we have the flags for printing:
 To develop this i had to understand how to use variadic functions and how to link different Makefiles together 
 <br />
 <br />
-Studies file contaims links that helped me understand and develop the project <br />
-Makefile_test contaims targets that runs the project with a main function
+Studies file contaims links that helped me understand and develop the project. <br />
+Makefile_test contaims targets that runs the project with a main function.
