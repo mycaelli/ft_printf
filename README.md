@@ -12,5 +12,5 @@ In this implementation we have the flags for printing:
 To develop this i had to understand how to use variadic functions and how to link different Makefiles together 
 <br />
 <br />
-Studies file contaims links that helped me understand and develop the project. <br />
-Makefile_tests contaims targets that runs the project with a main function.
+Studies file contains links that helped me understand and develop the project. <br />
+Makefile_tests contains targets that runs the project with a main function.
